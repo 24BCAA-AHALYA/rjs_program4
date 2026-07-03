@@ -1,7 +1,13 @@
 // Complete the function using object destructuring.
-
+let students =[
+    {name: "chandru",dept:"BCA",age:"18"},
+    {name: "anu",dept:"BCA",age:"19"},
+    {name: "kaviya",dept:"BCA",age:"19"},
+]; 
 function getStudentDetails(students) {
-    // Write your code here
+    for(const {name,age,dept} of  students){
+        console.log(name,age,dept);
+    }// Write your code here
 }
 
-module.exports = getStudentDetails;
+getStudentDetails(students);
