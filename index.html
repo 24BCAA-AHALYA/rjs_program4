@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details</title>
+</head>
+<body>
+    <h1>Student Details</h1>
+    <div id="output"></div>
+
+    <script>
+        const students = [
+            { name: "Abdul", age: 20, grade: "B" },
+            { name: "Mus", age: 20, grade: "A" }
+        ];
+
+        const output = students.map(({ name, age, grade }) =>
+            `${name} ${age} ${grade}`
+        );
+
+        document.getElementById("output").innerHTML =
+            output.map(student => `<p>${student}</p>`).join("");
+    </script>
+</body>
+</html>
